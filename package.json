@@ -9,7 +9,7 @@
         ".": "./dest/index.js"
     },
     "scripts": {
-        "start": "react-native start",
+        "build": "tsc",
         "test": "jest"
     },
     "resolutions": {
