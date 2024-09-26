@@ -1,7 +1,7 @@
-import { AuthWitness } from '@aztec/circuit-types';
-import { EcdsaAccountContractArtifact } from './artifact.js';
-import { DefaultAccountContract } from '@aztec/accounts/defaults';
-import { signMessage } from '../../enclave/secure-enclave.js';
+import { AuthWitness } from "@aztec/circuit-types";
+import { EcdsaAccountContractArtifact } from "./artifact.js";
+import { DefaultAccountContract } from "@aztec/accounts/defaults";
+import { signMessage } from "../../enclave/secure-enclave.js";
 /**
  * Account contract that authenticates transactions using ECDSA signatures
  * verified against a secp256k1 public key stored in an immutable encrypted note.
@@ -25,6 +25,7 @@ export class EcdsaAccountContract extends DefaultAccountContract {
 class EcdsaAuthWitnessProvider {
     constructor() { }
     async createAuthWit(messageHash) {
+        console.log("messageHash: ", messageHash.toString());
         const signature = await signMessage(messageHash.toString());
         return Promise.resolve(new AuthWitness(messageHash, signature));
     }

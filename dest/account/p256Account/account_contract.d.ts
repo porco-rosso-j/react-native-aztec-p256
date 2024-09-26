@@ -1,6 +1,6 @@
-import { type CompleteAddress } from '@aztec/circuit-types';
-import { DefaultAccountContract } from '@aztec/accounts/defaults';
-import { AuthWitnessProvider } from '@aztec/aztec.js';
+import { type CompleteAddress } from "@aztec/circuit-types";
+import { DefaultAccountContract } from "@aztec/accounts/defaults";
+import { AuthWitnessProvider } from "@aztec/aztec.js";
 /**
  * Account contract that authenticates transactions using ECDSA signatures
  * verified against a secp256k1 public key stored in an immutable encrypted note.
